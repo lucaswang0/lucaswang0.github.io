@@ -1,126 +1,34 @@
-# BlackDoc
+基于jekyll博客应用主题
+===
 
-![Jekyll version](https://img.shields.io/badge/Jekyll-3.x-brightgreen.svg?style=flat-square)
+pithy是一款适用于jekyll的博客应用主题，基于bootstrap前端框架开发。本着简约的视觉效果设计，目的是希望博客的浏览者能够更多的看到博客内容。
 
-BlackDoc is a two-column [Jekyll](http://jekyllrb.com) theme that's ideal for websites that require a master-detail layout for viewing of content. It's based on [Poole](http://getpoole.com), the Jekyll butler, and the [Hyde](http://hyde.getpoole.com) theme.
+使用说明
+===
 
-![BlackDoc screenshot](https://raw.githubusercontent.com/karloespiritu/blackdoc/master/public/images/blackdoc-screenshot.jpg)
+本主题是自由，免费，开源的，你可以克隆为新的仓库作为自己的博客。当然，在克隆仓库时为本主题加颗星，保留power by pithy，那将是对我最大的支持和鼓励。
 
-## Contents
+主题效果
+===
+- 首页
+-
+![首页](http://7xlgu7.com1.z0.glb.clouddn.com/pithy-index.jpg)
 
-- [Features](#features)
-- [Quick Start](#quick-start)
-- [Usage](#usage)
-- [Options](#options)
-  - [Sidebar menu](#sidebar-menu)
-  - [Scrolling sidebar content](#scrolling-sidebar-content)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
-- [Thanks](#thanks)
+- 列表
+-
+![列表](http://7xlgu7.com1.z0.glb.clouddn.com/pithy-list.jpg)
 
-## Features
+- 文章
+-
+![文章](http://7xlgu7.com1.z0.glb.clouddn.com/pithy-post.jpg)
 
-* Now compatible with Jekyll 3.x
-* Two-column layout with scrolling sidebar content
-* Ideal for websites that require  master-detail view of content
+反馈
+===
 
-## Quick Start
+在你浏览或使用本主题时，发现问题或者是有好的建议，希望能够在这里给予反馈。
 
-Download the zip file or clone the BlackDoc repo.
+[New Issue](https://github.com/guovz/pithy/issues/new)
 
-```bash
-$ git clone git@github.com:karloespiritu/BlackDoc.git mysite
-$ cd mysite
-```
-Make sure you have Ruby 2.2.5 or higher installed.
-
-```bash
-$ ruby --version
-ruby 2.2.5
-```
-
-Install bundler and install dependencies.
-
-```bash
-$ gem install bundler
-$ bundle install
-```
-
-Build and run your BlackDoc site.
-
-```bash
-$ jekyll serve
-```
-
-## Usage
-
-BlackDoc is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
-
-
-## Options
-
-BlackDoc includes some customizable options, typically applied via classes on the `<body>` element.
-
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
-
-```
----
-layout: page
-title: About
----
-```
-
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
-
-
-### Scrolling sidebar content
-
-By default, BlackDoc includes a scrolling sidebar that will display your markdown files in alphabetical order.
-
-### Themes
-
-BlackDoc ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
-
-To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
-
-```html
-<body class="theme-base-08">
-  ...
-</body>
-```
-
-To create your own theme, look to the Themes section of [included CSS file](https://github.com/karloespiritu/blackdoc/blob/master/public/css/blackdoc.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
-
-### Reverse layout
-
-![BlackDoc reverse screenshot](https://raw.githubusercontent.com/karloespiritu/BlackDoc/master/public/images/reverse-screenshot.png)
-
-BlackDoc's page orientation can be reversed with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-
-## Author
-
-**Karlo Espiritu**
-- <https://github.com/karloespiritu>
-- <https://twitter.com/karloespiritu>
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-\m/
-
-## Thanks
-
-Thanks to [@mdo](https://twitter.com/mdo) for creating the awesome [Poole](http://getpoole.com) project.
+License
+===
+[MIT License](https://github.com/guovz/pithy/blob/gh-pages/LICENSE.md)

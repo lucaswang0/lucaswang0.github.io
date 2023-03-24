@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="zh_cn">
   {% include head.html %}
+<body>
+  {% include navbar.html%}
 
-  <body>
+  <div class="container page-content">
+    {{ content }}
+  </div>
 
-    {% include sidebar.html %}
+  {% include footer.html%}
 
-    <div class="content container">
-      {{ content }}
-    </div>
-
-  </body>
+  {% include script.html %}
+</body>
 </html>

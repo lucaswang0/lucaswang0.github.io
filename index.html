@@ -1,37 +1,38 @@
 ---
 layout: default
-title: Home
 ---
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url | remove_first: '/'}}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
+<div class="col-md-9 col-content">
+    {% for post in paginator.posts %}
+      {% include posts.html%}
+    {% endfor %}
+    <nav>
+        <ul class="pagination pagination-posts">
+          {% if paginator.total_pages > 1 %}
+              {% if paginator.previous_page %}
+                <li>
+                  <a href="{{ paginator.previous_page_path | prepend: site.url}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+                </li>
+              {% endif %}
+              {% for page in (1..paginator.total_pages) %}
+                  {% if page == paginator.page %}
+                    <li class="active"><span>{{ page }}</span></li>
+                  {% elsif page == 1 %}
+                    <li><a href="{{ site.url }}">{{ page }}</a></li>
+                  {% else %}
+                    <li><a href="{{ site.baseurl | prepend: site.url }}/page{{ page }}">{{ page }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+              {% if !paginator.next_page %}
+                  <li>
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+                  </li>
+              {% endif %}
+            {% endif %}
+        </ul>
+    </nav>
 </div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+<div class="col-md-3 col-sidebar">
+    {% include sidebar_author.html%}
+    {% include sidebar_categories.html%}
+    {% include sidebar_tags.html%}
 </div>
