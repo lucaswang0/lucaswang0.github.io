@@ -1,13 +1,6 @@
 ---
-layout: default
+layout: layout
 ---
-<div class="col-md-9 col-content">
-    <section class="category">
-      {% for post in page.category.last %}
-            {% include posts.html%}
-      {% endfor %}
-    </section>
-</div>
-<div class="col-md-3 col-sidebar">
-    {% include sidebar_categories.html %}
-</div>
+
+{% assign __ = site.data.languages[site.language] %}
+{% include category.html %}
