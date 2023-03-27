@@ -1,10 +1,8 @@
 ---
 title: 'Markdown内嵌PDF方法'
 layout: post
-tags:
-  - picture
-  - pdf
-category: picture
+tags: [pdf]
+category: pdf
 ---
 Markdown内嵌PDF方法
 
